@@ -28,6 +28,10 @@ function getRandomHexString(stringLength) {
 
 
 newColourBtnElement.addEventListener("click", function () {
-    const randomHexString = getRandomHexString(6);
-    alert(randomHexString);
+    const randomHexString = "#" + getRandomHexString(6);
+    //alert(randomHexString);
+
+    document.body.style.setProperty("background-color", randomHexString)
+
+    currentColourElement.textContent = randomHexString;
 });
